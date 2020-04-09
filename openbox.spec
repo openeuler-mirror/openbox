@@ -1,6 +1,6 @@
 Name:             openbox
 Version:          3.6.1
-Release:          11
+Release:          12
 Summary:          Windowmanager based on the original blackbox-code
 License:          GPLv2+
 URL:              http://openbox.org
@@ -9,12 +9,13 @@ Source1:          http://icculus.org/openbox/tools/setlayout.c
 Source2:          xdg-menu
 Source3:          menu.xml
 Source4:          terminals.menu
-Patch1:           openbox-python3.patch
+#switch packaged python scrpits to python3
+Patch0001:           openbox-python3.patch
 
 Suggests:         python3-gobject
 BuildRequires:    gettext desktop-file-utils pango-devel startup-notification-devel libxml2-devel
 BuildRequires:    libXcursor-devel libXt-devel libXrandr-devel libXinerama-devel imlib2-devel libpng-devel
-Requires:         python3-pyxdg redhat-menus
+Requires:         python3-pyxdg
 Provides:         firstboot(windowmanager)
 Obsoletes:        gdm-control < 3.5.2-5 gnome-panel-control < 3.5.2-5 %{name}-gnome < 3.5.2-5
 Provides:         %{name}-libs = %{version}-%{release}
@@ -116,5 +117,8 @@ install -m644 -D data/gnome-session/openbox-gnome-fallback.session \
 %{_mandir}/man1/*
 
 %changelog
+* Wed Apr 8 2020 liangguohui <liangguohui1@huawei.com> - 3.6.1-12
+- Add path comments and remove unnecessary dependencies
+
 * Fri Dec 20 2019 wangzhishun <wangzhishun1@huawei.com> - 3.6.1-11
 - Package init
