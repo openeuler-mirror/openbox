@@ -42,7 +42,7 @@ use openbox.
 
 %package     kde
 Summary:     Openbox KDE integration
-Requires:    %{name} = %{version}-%{release} plasma-workspace
+Requires:    %{name} = %{version}-%{release}
 BuildArch:   noarch
 
 %description   kde
