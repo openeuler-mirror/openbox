@@ -117,7 +117,7 @@ install -m644 -D data/gnome-session/openbox-gnome-fallback.session \
 %{_mandir}/man1/*
 
 %changelog
-* Tue 08 Jun 2021 sunguoshuai <sunguoshuai@huawei.com> - 3.6.1-13
+* Tue Jun 08 2021 sunguoshuai <sunguoshuai@huawei.com> - 3.6.1-13
 - Del useless deps for openbox-kde
 
 * Wed Apr 8 2020 liangguohui <liangguohui1@huawei.com> - 3.6.1-12
