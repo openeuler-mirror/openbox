@@ -1,6 +1,6 @@
 Name:             openbox
 Version:          3.6.1
-Release:          12
+Release:          13
 Summary:          Windowmanager based on the original blackbox-code
 License:          GPLv2+
 URL:              http://openbox.org
@@ -42,7 +42,7 @@ use openbox.
 
 %package     kde
 Summary:     Openbox KDE integration
-Requires:    %{name} = %{version}-%{release} plasma-workspace
+Requires:    %{name} = %{version}-%{release}
 BuildArch:   noarch
 
 %description   kde
@@ -117,6 +117,9 @@ install -m644 -D data/gnome-session/openbox-gnome-fallback.session \
 %{_mandir}/man1/*
 
 %changelog
+* Tue 08 Jun 2021 sunguoshuai <sunguoshuai@huawei.com> - 3.6.1-13
+- Del useless deps for openbox-kde
+
 * Wed Apr 8 2020 liangguohui <liangguohui1@huawei.com> - 3.6.1-12
 - Add path comments and remove unnecessary dependencies
 
