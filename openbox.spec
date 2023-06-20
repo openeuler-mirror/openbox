@@ -1,6 +1,6 @@
 Name:             openbox
 Version:          3.6.1
-Release:          13
+Release:          14
 Summary:          Windowmanager based on the original blackbox-code
 License:          GPLv2+
 URL:              http://openbox.org
@@ -63,7 +63,7 @@ sed -ie 's|^hardcode_libdir_flag_spec=.*$|hardcode_libdir_flag_spec=""|g' libtoo
 sed -ie 's|^runpath_var=LD_RUN_PATH$|runpath_var=DIE_RPATH_DIE|g' libtool
 %make_build
 
-gcc $RPM_OPT_FLAGS $RPM_LD_FLAGS -o setlayout %{SOURCE1} -lX11
+$CC $RPM_OPT_FLAGS $RPM_LD_FLAGS -o setlayout %{SOURCE1} -lX11
 
 %install
 %make_install
@@ -117,6 +117,9 @@ install -m644 -D data/gnome-session/openbox-gnome-fallback.session \
 %{_mandir}/man1/*
 
 %changelog
+* Tue Jun 20 2023 yoo <sunyuechi@iscas.ac.cn> - 3.6.1-14
+- fix clang build error
+
 * Tue Jun 08 2021 sunguoshuai <sunguoshuai@huawei.com> - 3.6.1-13
 - Del useless deps for openbox-kde
 
